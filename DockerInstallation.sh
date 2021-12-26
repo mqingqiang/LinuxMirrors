@@ -467,7 +467,7 @@ function ShowVersion() {
     echo -e "${WORKING} 验证安装版本...\n"
     docker -v
     VERIFICATION_DOCKER=$?
-    [[ ${DOCKER_COMPOSE} == "True" ]] && docker-compose -v
+    [[ ${DOCKER_COMPOSE} == "True" ]] && docker compose version
     if [ ${VERIFICATION_DOCKER} -eq 0 ]; then
         echo -e "\n${SUCCESS} 安装完成"
     else
