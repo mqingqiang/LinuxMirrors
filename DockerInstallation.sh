@@ -46,13 +46,13 @@ DockerRepo=$RedHatReposDir/download.docker.com_linux_*.repo
 DockerDir=/etc/docker
 DockerConfig=$DockerDir/daemon.json
 DockerConfigBackup=$DockerDir/daemon.json.bak
-DockerCompose=/usr/local/bin/docker-compose
+DockerCompose=/usr/local/lib/docker/cli-plugins/docker-compose
 DockerVersionFile=docker-version.txt
 DockerCEVersionFile=docker-ce-version.txt
 DockerCECLIVersionFile=docker-ce-cli-version.txt
 PROXY_URL=https://ghproxy.com/
-DOCKER_COMPOSE_VERSION=1.29.2
-DOCKER_COMPOSE_DOWNLOAD_URL=https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-Linux-x86_64
+DOCKER_COMPOSE_VERSION=v2.2.2
+DOCKER_COMPOSE_DOWNLOAD_URL=https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)
 
 RED='\033[31m'
 GREEN='\033[32m'
