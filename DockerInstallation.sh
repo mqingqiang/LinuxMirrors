@@ -437,6 +437,7 @@ function DockerCompose() {
         [ -e $DockerCompose ] && rm -rf $DockerCompose
         if [[ ${ARCH} == "x86_64" ]]; then
             echo -e ''
+            mkdir -p /usr/local/lib/docker/cli-plugins
             if [ ${DOCKER_COMPOSE_DOWNLOAD_PROXY} == "True" ]; then
                 curl -L ${PROXY_URL}${DOCKER_COMPOSE_DOWNLOAD_URL} -o $DockerCompose
             else
